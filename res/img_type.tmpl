@@ -1,0 +1,18 @@
+/*
+* Types definitions
+*/
+#ifndef _IMGDEFS_H_
+#define _IMGDEFS_H_
+#include <stdint.h>
+
+#pragma pack(1)
+
+typedef struct
+{
+	uint32_t width;
+	uint32_t height;
+	uint8_t	 bit_per_pixel;
+	uint8_t* data;
+}DSP_Image_t;
+
+#endif _IMGDEFS_H_

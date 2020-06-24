@@ -1,0 +1,30 @@
+/*
+* Types definitions
+*/
+#ifndef _FNTDEFS_H_
+#define _FNTDEFS_H_
+#include <stdint.h>
+
+#pragma pack(1)
+typedef struct
+{
+    uint16_t offset;    //! offset in bitmap table
+    uint8_t width;      //! width of symbol
+    uint8_t height;     //! height of symbol
+    uint8_t trimed;     //! quantity of empty lines, removed from bottom
+}Font_Char_info_t;
+#pragma pack()
+
+typedef struct
+{
+    char name[16];              //! name of font, may be empty
+    uint8_t* bitmaps;           //! table of bitmaps of symbols
+    Font_Char_info_t* descr;    //! table of descriptors of symbols. May be NULL for monospace fonts
+    uint8_t width;              //! width of symbol. Ignored if table of descriptors are defined
+    uint8_t height;             //! untrimmed symbols height
+    uint8_t start;              //! code of first symbol in table
+    uint8_t stop;               //! code of last symbol in table
+    int8_t spacing;             //! spacing between symbols in line
+}Font_type_t;
+
+#endif _FNTDEFS_H_

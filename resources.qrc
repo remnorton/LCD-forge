@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/Icons">
+        <file alias="MAIN">res/LCD-forge.png</file>
+        <file>res/iconfinder_add.png</file>
+        <file>res/iconfinder_font.png</file>
+        <file>res/iconfinder_save.png</file>
+        <file>res/iconfinder_gimp2_7124.png</file>
+        <file>res/iconfinder_preferences-desktop-font.png</file>
+        <file>res/image-x-generic.png</file>
+    </qresource>
+    <qresource prefix="/Files">
+        <file alias="TYPEDEFS">res/typedefs.tmpl</file>
+        <file alias="IMG_TYPE">res/img_type.tmpl</file>
+    </qresource>
+</RCC>
