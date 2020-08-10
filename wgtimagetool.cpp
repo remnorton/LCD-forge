@@ -6,6 +6,9 @@
 #include "bitmaptresdialog.h"
 #include "config.h"
 
+#include <vector>
+#include <QMap>
+
 #pragma pack(1)
 typedef struct
 {
