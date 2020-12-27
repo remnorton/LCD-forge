@@ -412,10 +412,10 @@ void wgtFontTool::generateCode()
 
     //qDebug() << Q_FUNC_INFO << start << stop << spaced << ((spaced > 0) && (spaced < stop)) << monospace;
     bool dsc_no_generate = (monospace && !((spaced > 0) && (spaced < stop)));
-    descriptorsTable = dsc_no_generate?"":QString("Font_Char_info_t %1[]=\r\n{\r\n%2\r\n}; //Local 8-bit codepage table descriptors").arg(dsaName).arg(descriptorsTable);
+    descriptorsTable = dsc_no_generate?"":QString("const Font_Char_info_t %1[]=\r\n{\r\n%2\r\n}; //Local 8-bit codepage table descriptors").arg(dsaName).arg(descriptorsTable);
 
 
-    bitmapTable = QString("uint8_t %1[]=\r\n{\r\n%2\r\n}; //Local 8-bit codepage bitmaps")
+    bitmapTable = QString("const uint8_t %1[]=\r\n{\r\n%2\r\n}; //Local 8-bit codepage bitmaps")
                   .arg(btaName)
                   .arg(bitmapTable);
 

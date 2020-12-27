@@ -108,7 +108,7 @@ void wgtImageTool::on_btImage_clicked()
     bmp_name.replace(" ","_").replace("-","_");
     bmp_name += "_bitmap";
 
-    Content_c = QString("/*\r\n* Image data for '%7'\r\n*/\r\n\r\nuint8_t %1[] = {\r\n%2\r\n};\r\n\r\n DSP_Image_t %1_image = {\r\n%3 /*width*/,\r\n%4, /*height*/\r\n%5, /*bit_per_pixel*/\r\n%6 /*data*/\r\n};\r\n")
+    Content_c = QString("/*\r\n* Image data for '%7'\r\n*/\r\n\r\nconst uint8_t %1[] = {\r\n%2\r\n};\r\n\r\n DSP_Image_t %1_image = {\r\n%3 /*width*/,\r\n%4, /*height*/\r\n%5, /*bit_per_pixel*/\r\n%6 /*data*/\r\n};\r\n")
             .arg(bmp_name)
             .arg(Content_c)
             .arg(source.width())
@@ -185,7 +185,7 @@ void wgtImageTool::on_btBitmap_clicked()
     QString bmp_name = fname;
     bmp_name.replace(" ","_").replace("-","_");
 
-    Content_c = QString("/*\r\n* Bitmap data for '%1'\r\n*/\r\n\r\nuint8_t %2_bytes[] = {\r\n%3\r\n};\r\n\r\nDSP_Bitmap_t %2_bitmap = {\r\n%4, /*width*/\r\n%5, /*height*/\r\n%2_bytes /*data*/\r\n};\r\n")
+    Content_c = QString("/*\r\n* Bitmap data for '%1'\r\n*/\r\n\r\nconst uint8_t %2_bytes[] = {\r\n%3\r\n};\r\n\r\nDSP_Bitmap_t %2_bitmap = {\r\n%4, /*width*/\r\n%5, /*height*/\r\n%2_bytes /*data*/\r\n};\r\n")
             .arg(finfo.fileName())
             .arg(bmp_name)
             .arg(Content_c)
